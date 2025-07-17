@@ -1,59 +1,79 @@
-# AdvogadoHiago
+# Portfólio - Doutor Hiago 👨‍⚖️
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+Este é o repositório do site de portfólio do advogado **Doutor Hiago**, desenvolvido utilizando **Angular** e estilizado com **Tailwind CSS**. O objetivo do projeto é apresentar as áreas de atuação, experiências profissionais e formas de contato do advogado de maneira profissional, moderna e responsiva.
 
-## Development server
+## 🔧 Tecnologias Utilizadas
 
-To start a local development server, run:
+- [Angular](https://angular.io/) – Framework para construção do frontend.
+- [Tailwind CSS](https://tailwindcss.com/) – Utilizado para estilização com classes utilitárias.
+- [TypeScript](https://www.typescriptlang.org/) – Linguagem principal do Angular.
+- Git – Controle de versão.
+- VS Code – Editor de código.
 
-```bash
-ng serve
+## 📁 Estrutura de Pastas
+
+```
+DOUTORHIAGO/
+├── public/                    # Imagens públicas do site
+│   ├── DrHiago.jpeg
+│   └── image.png
+├── src/
+│   ├── app/
+│   │   ├── Components/        # Componentes organizados por seção
+│   │   │   ├── about/
+│   │   │   ├── area-activity/
+│   │   │   ├── background-experience/
+│   │   │   ├── contact/
+│   │   │   ├── footer/
+│   │   │   ├── home/
+│   │   │   └── navbar/
+│   │   ├── app.component.ts
+│   │   ├── app.component.html
+│   │   ├── app.component.css
+│   │   ├── app.module.ts
+│   │   └── app-routing.module.ts
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.css
+├── tailwind.config.js         # Configuração do Tailwind
+├── angular.json               # Configuração do Angular
+├── package.json               # Dependências e scripts
+├── README.md                  # Este arquivo
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🚀 Como Rodar o Projeto
 
-## Code scaffolding
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/doutor-hiago.git
+   cd doutor-hiago
+   ```
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+2. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
 
-```bash
-ng generate component component-name
-```
+3. **Inicie o servidor de desenvolvimento**:
+   ```bash
+   ng serve
+   ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+4. Acesse `http://localhost:4200` no seu navegador.
 
-```bash
-ng generate --help
-```
+## 📌 Funcionalidades
 
-## Building
+- Página inicial com apresentação
+- Seção sobre o advogado
+- Áreas de atuação
+- Experiências profissionais
+- Formulário de contato
+- Layout responsivo e moderno
 
-To build the project run:
+## 🖼️ Imagens
 
-```bash
-ng build
-```
+As imagens estão localizadas na pasta `public/`. O projeto utiliza fotos reais do advogado para criar uma identidade visual confiável e profissional.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 📬 Contato
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Para mais informações, dúvidas ou sugestões, entre em contato com o desenvolvedor ou diretamente com o advogado através do formulário no site.
