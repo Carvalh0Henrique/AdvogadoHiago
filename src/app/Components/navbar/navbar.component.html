@@ -1,1 +1,13 @@
-<p>navbar works!</p>
+<header class="bg-white py-4 border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+        <div class="text-2xl font-bold text-primary">Dr. Hiago Carvalho</div>
+        <nav class="hidden md:flex">
+            <ul class="flex space-x-8">
+                <li><a [routerLink]="['/home']" fragment="about" class="text-primary font-medium hover:text-secondary transition-colors">Sobre</a></li>
+                <li><a [routerLink]="['/home']" fragment="area-activity" class="text-primary font-medium hover:text-secondary transition-colors">Áreas de Atuação</a></li>
+                <li><a [routerLink]="['/home']" fragment="background-experience" class="text-primary font-medium hover:text-secondary transition-colors">Formação e Experiência</a></li>
+                <li><a [routerLink]="['/home']" fragment="contact" class="text-primary font-medium hover:text-secondary transition-colors">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
