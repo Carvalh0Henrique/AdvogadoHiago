@@ -1,1 +1,26 @@
-<p>home works!</p>
+<section id="hero" class="bg-primary-dark text-white">
+    <div class="container mx-auto px-6 py-24 md:py-32 text-center flex flex-col items-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Advocacia com Excelência e Compromisso</h1>
+        <p class="text-lg md:text-xl max-w-3xl mb-8 text-gray-300">Defendendo seus direitos com ética, dedicação e resultados comprovados há mais de 15 anos.</p>
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <a [routerLink]="['/home']" fragment="contact" class="px-8 py-3 bg-secondary text-primary-dark font-bold rounded-lg hover:bg-secondary-hover transition-colors">Agende uma Consulta</a>
+            <a [routerLink]="['/home']" fragment="area-activity" class="px-8 py-3 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-primary-dark transition-colors">Áreas de Atuação</a>
+        </div>
+    </div>
+</section>
+
+<div id="about">
+    <app-about></app-about>
+</div>
+
+<div id="area-activity">
+    <app-area-activity></app-area-activity>
+</div>
+
+<div id="background-experience">
+    <app-background-experience></app-background-experience>
+</div>
+
+<div id="contact">
+    <app-contact></app-contact>
+</div>
