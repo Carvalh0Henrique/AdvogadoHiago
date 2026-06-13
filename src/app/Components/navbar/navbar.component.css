@@ -1,0 +1,41 @@
+.background-color {
+    background-color: #f2efe9;
+}
+
+.site-header {
+    transition: padding .4s cubic-bezier(.22, 1, .36, 1),
+                background-color .4s ease,
+                box-shadow .4s ease,
+                border-color .4s ease;
+}
+
+.site-header.is-scrolled {
+    padding-top: .65rem;
+    padding-bottom: .65rem;
+    border-color: rgba(212, 160, 23, .25);
+    background-color: rgba(242, 239, 233, .92);
+    box-shadow: 0 16px 45px rgba(0, 34, 68, .12);
+    backdrop-filter: blur(16px);
+}
+
+.site-header nav a {
+    position: relative;
+}
+
+.site-header nav a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -.45rem;
+    left: 0;
+    height: 2px;
+    background: #d4a017;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s cubic-bezier(.22, 1, .36, 1);
+}
+
+.site-header nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}

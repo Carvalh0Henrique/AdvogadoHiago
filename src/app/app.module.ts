@@ -10,6 +10,9 @@ import { AreaActivityComponent } from './Components/area-activity/area-activity.
 import { BackgroundExperienceComponent } from './Components/background-experience/background-experience.component';
 import { HomeComponent } from './Components/home/home.component';
 import { ContactComponent } from './Components/contact/contact.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
+import { RevealOnScrollDirective } from './Directives/reveal-on-scroll.directive';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import { ContactComponent } from './Components/contact/contact.component';
     AreaActivityComponent,
     BackgroundExperienceComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    RevealOnScrollDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,12 +1,47 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { EnviaEmailService } from '../../Services/envia-email.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   standalone: false,
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+  styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
+  
+  form!: FormGroup;
+
+  constructor(private enviaEmail: EnviaEmailService, private fb: FormBuilder) {}
+
+  ngOnInit(): void {
+    // Inicializa o FormGroup com os campos usados no template
+    this.form = this.fb.group({
+      nome: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      telefone: [''],
+      assunto: [''],
+      mensagem: ['', Validators.required]
+    });
+  }
+
+
+  enviar() {
+    if (this.form.invalid) return;
+
+    this.enviaEmail.enviarMensagem(this.form.value)
+      .subscribe({
+        next: (res) => {
+          alert("Mensagem enviada com sucesso!");
+          this.form.reset();
+        },
+        error: (err) => {
+          alert("Erro ao enviar mensagem.");
+          console.error(err);
+        }
+      });
+  }
+
   ngAfterViewInit(): void {
     const contactForm = document.getElementById('contactForm') as HTMLFormElement | null;
 

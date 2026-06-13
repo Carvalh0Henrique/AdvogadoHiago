@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-area-activity',
   standalone: false,
   templateUrl: './area-activity.component.html',
-  styleUrl: './area-activity.component.css'
+  styleUrls: ['./area-activity.component.css']
 })
 export class AreaActivityComponent {
 

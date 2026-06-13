@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-background-experience',
   standalone: false,
   templateUrl: './background-experience.component.html',
-  styleUrl: './background-experience.component.css'
+  styleUrls: ['./background-experience.component.css']
 })
 export class BackgroundExperienceComponent {
 

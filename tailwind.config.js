@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        serif: ['Lora', 'serif']
       },
       colors: {
         'primary': '#003366',

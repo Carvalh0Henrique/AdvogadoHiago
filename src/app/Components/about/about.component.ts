@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-about',
   standalone: false,
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-  image : string = "DrHiago.jpeg";
+  image : string = "logotipo.png";
 }
