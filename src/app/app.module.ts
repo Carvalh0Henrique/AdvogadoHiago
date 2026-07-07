@@ -13,6 +13,7 @@ import { ContactComponent } from './Components/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { RevealOnScrollDirective } from './Directives/reveal-on-scroll.directive';
+import { BadgeCheck, Handshake, LucideAngularModule, UserCheck } from 'lucide-angular';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RevealOnScrollDirective } from './Directives/reveal-on-scroll.directive
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LucideAngularModule.pick({ BadgeCheck, Handshake, UserCheck })
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]
