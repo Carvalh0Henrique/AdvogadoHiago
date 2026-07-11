@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { EnviaEmailService } from '../../Services/envia-email.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -12,7 +11,7 @@ export class ContactComponent implements OnInit {
   
   form!: FormGroup;
 
-  constructor(private enviaEmail: EnviaEmailService, private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
     // Inicializa o FormGroup com os campos usados no template
@@ -26,32 +25,8 @@ export class ContactComponent implements OnInit {
   }
 
 
-  enviar() {
-    if (this.form.invalid) return;
-
-    this.enviaEmail.enviarMensagem(this.form.value)
-      .subscribe({
-        next: (res) => {
-          alert("Mensagem enviada com sucesso!");
-          this.form.reset();
-        },
-        error: (err) => {
-          alert("Erro ao enviar mensagem.");
-          console.error(err);
-        }
-      });
-  }
-
-  ngAfterViewInit(): void {
-    const contactForm = document.getElementById('contactForm') as HTMLFormElement | null;
-
-    if (contactForm) {
-      contactForm.addEventListener('submit', (e: Event) => {
-        e.preventDefault();
-        this.showNotification('Mensagem enviada com sucesso! (Simulação)');
-        contactForm.reset();
-      });
-    }
+  enviar(): void {
+    this.showNotification('Feature em desenvolvimento');
   }
 
   showNotification(message: string): void {

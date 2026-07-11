@@ -1,3 +1,76 @@
-.background-color {
-    background-color: #f2efe9;
+:host { display: block; }
+
+.publications-section {
+  padding: 6rem 0;
+  overflow: hidden;
+  background: radial-gradient(circle at 10% 15%, rgba(212,160,23,.08), transparent 25%), #f8f6f1;
+}
+
+.publications-heading { max-width: 760px; margin: 0 auto 3.25rem; text-align: center; }
+.publications-eyebrow { display: block; margin-bottom: .65rem; color: #8d6a0b; font-size: .72rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }
+.publications-heading h2 { margin: 0; color: #003366; font: 600 clamp(2.15rem,4vw,3.25rem)/1.15 Georgia,serif; letter-spacing: -.025em; }
+.heading-rule { width: 64px; height: 3px; display: block; margin: 1rem auto 1.25rem; border-radius: 99px; background: #d4a017; }
+.publications-heading p { color: #5f6872; font-size: 1.02rem; line-height: 1.7; }
+
+.profile-link { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1rem; color: #003366; font-size: .88rem; font-weight: 750; }
+.profile-link lucide-icon { width: 20px; height: 20px; }
+
+.carousel { position: relative; max-width: 1240px; margin: 0 auto; }
+.carousel-viewport { overflow: hidden; padding: .5rem; }
+.publications-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.5rem; }
+
+.instagram-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0,51,102,.12);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 14px 35px rgba(19,42,65,.09);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.instagram-card:hover { transform: translateY(-5px); box-shadow: 0 22px 44px rgba(19,42,65,.14); }
+.publication-cover { position: relative; height: 260px; overflow: hidden; background: #e5e1d9; }
+.publication-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.22,1,.36,1); }
+.instagram-card:hover img { transform: scale(1.035); }
+.instagram-badge { position: absolute; z-index: 1; right: 1rem; bottom: 1rem; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; color: #fff; background: rgba(0,34,68,.88); }
+.instagram-badge lucide-icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; line-height: 0; }
+.instagram-badge lucide-icon svg { width: 20px; height: 20px; display: block; }
+
+.publication-content { min-height: 245px; display: flex; flex-direction: column; padding: 1.4rem 1.5rem 1.5rem; }
+.post-profile { color: #9a7108; font-size: .76rem; font-weight: 800; letter-spacing: .04em; }
+.publication-content strong { margin-top: .25rem; color: #003366; font-size: .92rem; }
+.publication-content p { margin: 1.1rem 0 1.4rem; color: #485868; font-size: 1rem; line-height: 1.55; }
+.instagram-link { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid #e8ebed; color: #003366; font-size: .86rem; font-weight: 750; }
+.instagram-card:hover .instagram-link { color: #a87800; }
+
+.carousel-control { position: absolute; z-index: 4; top: 50%; width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid rgba(0,51,102,.14); border-radius: 50%; color: #003366; background: #fff; box-shadow: 0 8px 22px rgba(0,34,68,.13); transform: translateY(-50%); transition: color .2s,background .2s,opacity .2s; }
+.carousel-control:not(:disabled):hover { color: #fff; background: #003366; }
+.carousel-control:disabled { cursor: not-allowed; opacity: .35; }
+.carousel-control lucide-icon { width: 24px; height: 24px; }
+.carousel-control-previous { left: -4rem; }
+.carousel-control-next { right: -4rem; }
+
+.carousel-pagination { display: flex; justify-content: center; gap: .55rem; margin-top: 2rem; }
+.carousel-pagination button { width: 9px; height: 9px; border-radius: 50%; background: #c9cdd0; transition: width .25s,background .25s; }
+.carousel-pagination button.active { width: 28px; border-radius: 99px; background: #d4a017; }
+
+@media (max-width:1360px) {
+  .carousel { padding: 0 3.4rem; }
+  .carousel-control-previous { left: 0; }
+  .carousel-control-next { right: 0; }
+}
+@media (max-width:1099px) { .publications-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width:767px) {
+  .publications-section { padding: 4.5rem 0; }
+  .publications-heading { margin-bottom: 2rem; }
+  .publications-heading p { font-size: .94rem; }
+  .carousel { padding: 0; }
+  .publications-grid { grid-template-columns: minmax(0,1fr); }
+  .carousel-control { top: 215px; width: 42px; height: 42px; }
+  .carousel-control-previous { left: -12px; }
+  .carousel-control-next { right: -12px; }
+  .publication-cover { height: 280px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .instagram-card,.publication-cover img,.carousel-control,.carousel-pagination button { transition: none; }
 }

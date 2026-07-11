@@ -1,6 +1,6 @@
-# Portfólio - Doutor Hiago 👨‍⚖️
+# Moretti, Carvalho e Pires Advocacia
 
-Este é o repositório do site de portfólio do advogado **Doutor Hiago**, desenvolvido utilizando **Angular** e estilizado com **Tailwind CSS**. O objetivo do projeto é apresentar as áreas de atuação, experiências profissionais e formas de contato do advogado de maneira profissional, moderna e responsiva.
+Este é o repositório do site institucional do escritório **Moretti, Carvalho e Pires**, desenvolvido utilizando **Angular** e estilizado com **Tailwind CSS**. O objetivo do projeto é apresentar as áreas de atuação, publicações e formas de contato do escritório de maneira profissional, moderna e responsiva.
 
 ## 🔧 Tecnologias Utilizadas
 
