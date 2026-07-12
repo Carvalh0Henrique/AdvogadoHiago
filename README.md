@@ -77,3 +77,13 @@ As imagens estão localizadas na pasta `public/`. O projeto utiliza fotos reais 
 ## 📬 Contato
 
 Para mais informações, dúvidas ou sugestões, entre em contato com o desenvolvedor ou diretamente com o advogado através do formulário no site.
+
+## Publicação no GitHub Pages
+
+Execute `npm run build` para gerar a versão de produção em `dist/advogado-hiago`.
+O build usa `baseHref` igual a `/`, copia o domínio personalizado por meio de
+`public/CNAME` e cria um `404.html` igual ao `index.html`. Esse fallback permite
+que rotas do Angular, como `/home`, sejam carregadas diretamente no GitHub Pages.
+
+A pasta a ser publicada é `dist/advogado-hiago`; o código-fonte permanece na
+branch principal e não deve ser substituído pelos arquivos compilados.
