@@ -22,35 +22,35 @@ export class BackgroundExperienceComponent implements OnInit {
 
   readonly posts: InstagramPost[] = [
     {
-      advogado: 'Moretti, Carvalho e Pires',
+      advogado: 'Moretti Carvalho Pires',
       perfil: '@moretticarvalhopires',
       imagem: '/images/posts/post-1.jpg',
       descricao: 'Respeitar a lei é proteger a liberdade.',
       url: 'https://www.instagram.com/moretticarvalhopires/p/DaWEBRljxCQ/'
     },
     {
-      advogado: 'Moretti, Carvalho e Pires',
+      advogado: 'Moretti Carvalho Pires',
       perfil: '@moretticarvalhopires',
       imagem: '/images/posts/post-2.jpg',
-      descricao: 'Conheça a identidade do escritório Moretti, Carvalho e Pires.',
+      descricao: 'Conheça a identidade do escritório Moretti Carvalho Pires.',
       url: 'https://www.instagram.com/moretticarvalhopires/p/DaWD9Q5DzSp/'
     },
     {
-      advogado: 'Moretti, Carvalho e Pires',
+      advogado: 'Moretti Carvalho Pires',
       perfil: '@moretticarvalhopires',
       imagem: '/images/posts/post-3.jpg',
       descricao: 'Nossos canais oficiais para informação e atendimento jurídico.',
       url: 'https://www.instagram.com/moretticarvalhopires/p/DaWD5uuD8ib/'
     },
     {
-      advogado: 'Moretti, Carvalho e Pires',
+      advogado: 'Moretti Carvalho Pires',
       perfil: '@moretticarvalhopires',
       imagem: '/images/posts/post-sucessao.jpg',
       descricao: 'Entenda como possíveis mudanças no Código Civil podem impactar a sucessão e o patrimônio da sua família.',
       url: 'https://www.instagram.com/moretticarvalhopires/reel/DaqJX0WhAb5/'
     },
     {
-      advogado: 'Moretti, Carvalho e Pires',
+      advogado: 'Moretti Carvalho Pires',
       perfil: '@moretticarvalhopires',
       imagem: '/images/posts/post-apresentacao.jpg',
       descricao: 'Direito claro, prático e acessível para prevenir conflitos, proteger direitos e orientar decisões.',

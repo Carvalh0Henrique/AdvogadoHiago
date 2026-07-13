@@ -23,7 +23,7 @@ describe('AppComponent', () => {
   it(`should have the institutional title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Moretti, Carvalho e Pires');
+    expect(app.title).toEqual('Moretti Carvalho Pires');
   });
 
 });

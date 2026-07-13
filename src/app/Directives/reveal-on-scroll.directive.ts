@@ -23,7 +23,7 @@ export class RevealOnScrollDirective implements AfterViewInit, OnDestroy {
 
     this.context = gsap.context(() => {
       const content = element.querySelectorAll(
-        'h2, h3, p, img, form, .grid > div, .space-y-6 > div'
+        'h2, h3, p, img:not(.no-reveal), form, .grid > div, .space-y-6 > div'
       );
 
       gsap.from(content, {

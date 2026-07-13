@@ -1,87 +1,39 @@
 <section appRevealOnScroll id="areas-atuacao" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Áreas de Atuação</h2>
+        <h2 class="section-title-serif text-3xl md:text-4xl font-bold text-primary mb-4">Áreas de Atuação</h2>
         <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
-        <p class="max-w-3xl mx-auto text-gray-600 mb-12">Oferecemos serviços jurídicos especializados, com atuação técnica, ética e voltada à proteção dos direitos e interesses dos nossos clientes.</p>
+        <p class="max-w-3xl mx-auto text-gray-600 mb-12">Conheça os temas que podem ser objeto de parcerias com a Moretti Carvalho Pires.</p>
+
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 text-center">
-                <div class="inline-block p-4 bg-primary text-white rounded-full mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4.5 10.5V21h15V10.5"/></svg>
+            <article
+                *ngFor="let area of practiceAreas"
+                class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 text-center flex flex-col">
+                <div class="inline-flex self-center p-4 bg-primary text-white rounded-full mb-4">
+                    <lucide-icon
+                        [name]="area.icon"
+                        class="h-8 w-8"
+                        [strokeWidth]="1.5"
+                        aria-hidden="true">
+                    </lucide-icon>
                 </div>
-                <h3 class="text-xl font-bold text-primary mb-2">Direito Imobiliário</h3>
-                <p class="text-gray-600 mb-4">Assessoria e representação em transações, litígios e regularizações envolvendo imóveis, garantindo segurança jurídica em negociações e conflitos.</p>
+
+                <h3 class="text-xl font-bold text-primary mb-2">{{ area.title }}</h3>
+                <p class="text-gray-600 mb-4">{{ area.description }}</p>
+
                 <ul class="text-left space-y-2 text-gray-600 mb-4">
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Contratos e Due Diligence Imobiliária</li>
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Regularização de Imóveis</li>
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Disputas Possessórias e Condominiais</li>
+                    <li *ngFor="let service of area.services" class="flex items-start">
+                        <span class="text-secondary font-bold mr-2" aria-hidden="true">&#10003;</span>
+                        <span>{{ service }}</span>
+                    </li>
                 </ul>
-                <a href="#" class="font-bold text-secondary hover:text-secondary-hover">Saiba mais &rarr;</a>
-            </div>
-            <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 text-center">
-                <div class="inline-block p-4 bg-primary text-white rounded-full mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9h18M4 21h16M5 9V7l7-4 7 4v2M6 9v10M10 9v10M14 9v10M18 9v10" /></svg>
-                </div>
-                <h3 class="text-xl font-bold text-primary mb-2">Direito Bancário</h3>
-                <p class="text-gray-600 mb-4">Atuação estratégica em demandas envolvendo instituições financeiras, relações de crédito, cobranças indevidas e revisão de contratos bancários.</p>
-                <ul class="text-left space-y-2 text-gray-600 mb-4">
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Revisão de Juros e Contratos</li>
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Defesa em Ações de Cobrança</li>
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Fraudes, Golpes e Responsabilidade Bancária</li>
-                </ul>
-                <a href="#" class="font-bold text-secondary hover:text-secondary-hover">Saiba mais &rarr;</a>
-            </div>
-            <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 text-center">
-                <div class="inline-block p-4 bg-primary text-white rounded-full mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 12a4 4 0 100-8 4 4 0 000 8zm6 8v-1a4 4 0 00-4-4H10a4 4 0 00-4 4v1" /></svg>
-                </div>
-                <h3 class="text-xl font-bold text-primary mb-2">Direito Previdenciário</h3>
-                <p class="text-gray-600 mb-4">Assessoria completa na concessão, revisão e restabelecimento de benefícios previdenciários, garantindo atuação técnica perante o INSS e o Judiciário.</p>
-                    <ul class="text-left space-y-2 text-gray-600 mb-4">
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Aposentadorias e Pensões</li>
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Auxílio-Doença e BPC/LOAS</li>
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Revisões e Restabelecimentos</li>
-                </ul>
-                <a href="#" class="font-bold text-secondary hover:text-secondary-hover">Saiba mais &rarr;</a>
-            </div>
-            <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 text-center">
-                <div class="inline-block p-4 bg-primary text-white rounded-full mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 4h4v6h6v4h-6v6h-4v-6H4v-4h6V4z"  /></svg>
-                </div>
-                <h3 class="text-xl font-bold text-primary mb-2">Direito Médico</h3>
-                <p class="text-gray-600 mb-4">Atuação voltada à proteção jurídica de pacientes e profissionais da saúde em questões envolvendo planos, tratamentos, responsabilidades e negativas indevidas.</p>
-                    <ul class="text-left space-y-2 text-gray-600 mb-4">
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Negativas de Tratamento e Cirurgias</li>
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Ações contra Planos de Saúde</li>
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Responsabilidade Civil Médica</li>
-                </ul>
-                <a href="#" class="font-bold text-secondary hover:text-secondary-hover">Saiba mais &rarr;</a>
-            </div>
-            <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 text-center">
-                <div class="inline-block p-4 bg-primary text-white rounded-full mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 4v5c0 5-3.5 9-8 9s-8-4-8-9V7l8-4z"  /></svg>
-                </div>
-                <h3 class="text-xl font-bold text-primary mb-2">Direito do Consumidor</h3>
-                <p class="text-gray-600 mb-4">Representação em conflitos contra empresas, bancos, planos de saúde e prestadores de serviços, com foco na reparação de danos e na defesa dos direitos do consumidor.</p>
-                    <ul class="text-left space-y-2 text-gray-600 mb-4">
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Cobranças Indevidas</li>
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Produtos e Serviços com Defeito</li>
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Danos Materiais e Morais</li>
-                </ul>
-                <a href="#" class="font-bold text-secondary hover:text-secondary-hover">Saiba mais &rarr;</a>
-            </div>
-            <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 text-center">
-                <div class="inline-block p-4 bg-primary text-white rounded-full mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"  /></svg>
-                </div>
-                <h3 class="text-xl font-bold text-primary mb-2">Direito Empresarial</h3>
-                <p class="text-gray-600 mb-4">Assessoria jurídica voltada às necessidades de empresas, com foco na elaboração e revisão de contratos, estruturação de operações e resolução de conflitos comerciais e societários</p>
-                    <ul class="text-left space-y-2 text-gray-600 mb-4">
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Contratos Empresariais</li>
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Gestão de Riscos e Compliance</li>
-                    <li class="flex items-start"><span class="text-secondary font-bold mr-2">&#10003;</span> Conflitos Societários e Comerciais</li>
-                </ul>
-                <a href="#" class="font-bold text-secondary hover:text-secondary-hover">Saiba mais &rarr;</a>
-            </div>
+
+                <a
+                    [routerLink]="['/home']"
+                    fragment="contact"
+                    class="mt-auto font-bold text-secondary hover:text-secondary-hover">
+                    Saiba mais &rarr;
+                </a>
+            </article>
         </div>
     </div>
 </section>

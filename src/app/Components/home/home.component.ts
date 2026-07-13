@@ -1,8 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy } from '@angular/core';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-home',
@@ -38,18 +35,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
         .from('.hero-subtitle', { y: 18, opacity: 0, duration: .7 }, '-=.55')
         .from('.hero-actions a', { y: 14, opacity: 0, stagger: .08, duration: .55 }, '-=.4')
         .from('.trust-item', { y: 12, opacity: 0, stagger: .07, duration: .5 }, '-=.25')
-        .from('.legal-seal', { scale: .94, opacity: 0, duration: 1 }, '-=1');
-
-      gsap.to('.legal-seal-inner', {
-        rotation: 8,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '#hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: .8
-        }
-      });
+        .from('.legal-seal', { scale: .96, opacity: 0, duration: 1 }, '-=1');
     }, this.host.nativeElement);
   }
 

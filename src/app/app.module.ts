@@ -13,7 +13,21 @@ import { ContactComponent } from './Components/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { RevealOnScrollDirective } from './Directives/reveal-on-scroll.directive';
-import { BadgeCheck, ChevronLeft, ChevronRight, Handshake, Instagram, LucideAngularModule, UserCheck } from 'lucide-angular';
+import {
+  BriefcaseBusiness,
+  ChevronLeft,
+  ChevronRight,
+  Database,
+  FileSignature,
+  GitBranch,
+  Instagram,
+  Landmark,
+  Leaf,
+  LucideAngularModule,
+  Network,
+  SearchCheck,
+  ShieldCheck
+} from 'lucide-angular';
 
 @NgModule({
   declarations: [
@@ -32,7 +46,20 @@ import { BadgeCheck, ChevronLeft, ChevronRight, Handshake, Instagram, LucideAngu
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    LucideAngularModule.pick({ BadgeCheck, ChevronLeft, ChevronRight, Handshake, Instagram, UserCheck })
+    LucideAngularModule.pick({
+      BriefcaseBusiness,
+      ChevronLeft,
+      ChevronRight,
+      Database,
+      FileSignature,
+      GitBranch,
+      Instagram,
+      Landmark,
+      Leaf,
+      Network,
+      SearchCheck,
+      ShieldCheck
+    })
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]

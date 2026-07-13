@@ -1,6 +1,6 @@
-# Moretti, Carvalho e Pires Advocacia
+# Moretti Carvalho Pires Advocacia
 
-Este é o repositório do site institucional do escritório **Moretti, Carvalho e Pires**, desenvolvido utilizando **Angular** e estilizado com **Tailwind CSS**. O objetivo do projeto é apresentar as áreas de atuação, publicações e formas de contato do escritório de maneira profissional, moderna e responsiva.
+Este é o repositório do site institucional do escritório **Moretti Carvalho Pires**, desenvolvido utilizando **Angular** e estilizado com **Tailwind CSS**. O objetivo do projeto é apresentar as áreas de atuação, publicações e formas de contato do escritório de maneira profissional, moderna e responsiva.
 
 ## 🔧 Tecnologias Utilizadas
 

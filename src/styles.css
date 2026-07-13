@@ -26,6 +26,10 @@ body {
   background: var(--brand-gold);
 }
 
+.section-title-serif {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
 /* Hero */
 .hero-section {
   position: relative;
@@ -100,6 +104,8 @@ body {
 .hero-title-line {
   display: block;
   overflow: hidden;
+  padding-bottom: .14em;
+  margin-bottom: -.14em;
 }
 
 .hero-title-accent {
@@ -177,68 +183,11 @@ body {
 .legal-seal {
   width: min(32vw, 390px);
   aspect-ratio: 1;
-  display: grid;
-  place-items: center;
+  display: block;
   justify-self: center;
-  border-radius: 50%;
-  background: rgba(255,255,255,.55);
+  object-fit: contain;
+  border-radius: 12px;
   box-shadow: 0 35px 80px rgba(0,51,102,.12);
-}
-
-.legal-seal-inner {
-  position: relative;
-  width: 82%;
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(0,51,102,.3);
-  border-radius: 50%;
-}
-
-.seal-ring {
-  position: absolute;
-  inset: 8%;
-  border: 1px solid rgba(212,160,23,.75);
-  border-radius: 50%;
-}
-
-.seal-ring::before,
-.seal-ring::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 14%;
-  left: 14%;
-  height: 1px;
-  background: rgba(0,51,102,.18);
-}
-
-.seal-ring::after {
-  transform: rotate(90deg);
-}
-
-.seal-monogram {
-  position: relative;
-  z-index: 1;
-  color: var(--brand-blue);
-  font-family: Georgia, serif;
-  font-size: clamp(3.2rem, 7vw, 5.2rem);
-  letter-spacing: -.14em;
-}
-
-.seal-monogram span {
-  color: var(--brand-gold);
-  font-size: .55em;
-}
-
-.seal-caption {
-  position: absolute;
-  bottom: 20%;
-  color: var(--brand-blue);
-  font-size: .58rem;
-  font-weight: 700;
-  letter-spacing: .22em;
-  text-transform: uppercase;
 }
 
 /* Cards and editorial details */

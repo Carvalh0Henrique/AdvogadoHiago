@@ -3,15 +3,13 @@
 }
 
 .logo-frame {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
+    background-color: #f2efe9;
 }
 
 .logo-image-aligner {
     width: 100%;
     height: 100%;
-    transform: translate(-1.4%, 2.1%);
 }
 
 .logo-image {
