@@ -1,0 +1,8 @@
+.area-card {
+  cursor: pointer;
+}
+
+.area-card:focus-visible {
+  outline: 3px solid #d4a017;
+  outline-offset: 4px;
+}

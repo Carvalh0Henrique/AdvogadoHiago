@@ -7,7 +7,13 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <article
                 *ngFor="let area of practiceAreas"
-                class="bg-white p-8 rounded-lg shadow-lg border border-gray-100 text-center flex flex-col">
+                class="area-card bg-white p-8 rounded-lg shadow-lg border border-gray-100 text-center flex flex-col"
+                role="link"
+                tabindex="0"
+                [attr.aria-label]="'Conversar pelo WhatsApp sobre ' + area.title"
+                (click)="openWhatsApp(area)"
+                (keydown.enter)="openWhatsApp(area)"
+                (keydown.space)="$event.preventDefault(); openWhatsApp(area)">
                 <div class="inline-flex self-center p-4 bg-primary text-white rounded-full mb-4">
                     <lucide-icon
                         [name]="area.icon"
@@ -27,12 +33,9 @@
                     </li>
                 </ul>
 
-                <a
-                    [routerLink]="['/home']"
-                    fragment="contact"
-                    class="mt-auto font-bold text-secondary hover:text-secondary-hover">
+                <span class="mt-auto font-bold text-secondary" aria-hidden="true">
                     Saiba mais &rarr;
-                </a>
+                </span>
             </article>
         </div>
     </div>
