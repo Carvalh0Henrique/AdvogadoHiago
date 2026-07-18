@@ -10,6 +10,19 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
   
   form!: FormGroup;
+  private readonly whatsappPhone = '5515991456263';
+
+  readonly areasAtuacao = [
+    'Compliance',
+    'LGPD',
+    'ESG',
+    'Planejamento Patrimonial',
+    'Planejamento Sucessório',
+    'Governança',
+    'Contratos',
+    'Assessoria Empresarial Mensal',
+    'Consultoria Preventiva'
+  ];
 
   constructor(private fb: FormBuilder) {}
 
@@ -17,16 +30,38 @@ export class ContactComponent implements OnInit {
     // Inicializa o FormGroup com os campos usados no template
     this.form = this.fb.group({
       nome: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      telefone: [''],
-      assunto: [''],
+      assunto: ['', Validators.required],
       mensagem: ['', Validators.required]
     });
   }
 
 
   enviar(): void {
-    this.showNotification('Feature em desenvolvimento');
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      this.showNotification('Preencha os campos obrigatórios antes de enviar.');
+      return;
+    }
+
+    const { nome, assunto, mensagem } = this.form.value;
+    const texto = `${this.obterSaudacao()}\n\nSou ${nome}, e gostaria de falar sobre ${assunto}.\n\n${mensagem}`;
+    const url = `https://wa.me/${this.whatsappPhone}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
+
+  private obterSaudacao(): string {
+    const horaAtual = new Date().getHours();
+
+    if (horaAtual >= 3 && horaAtual < 12) {
+      return 'Olá, bom dia!';
+    }
+
+    if (horaAtual >= 12 && horaAtual < 18) {
+      return 'Olá, boa tarde!';
+    }
+
+    return 'Olá, boa noite!';
   }
 
   showNotification(message: string): void {

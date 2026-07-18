@@ -1,0 +1,62 @@
+.custom-select-wrapper {
+  position: relative;
+}
+
+.custom-select-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: .65rem;
+  height: .65rem;
+  pointer-events: none;
+  border-right: 2px solid var(--brand-gold);
+  border-bottom: 2px solid var(--brand-gold);
+  transform: translateY(-65%) rotate(45deg);
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.custom-select-wrapper:focus-within::after {
+  border-color: var(--brand-blue);
+  transform: translateY(-45%) rotate(225deg);
+}
+
+.custom-select {
+  width: 100%;
+  min-height: 44px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: .65rem 3rem .65rem .9rem;
+  color: #1f2937;
+  background:
+    linear-gradient(135deg, rgba(212, 160, 23, .08), rgba(255, 255, 255, 0) 42%),
+    #fff;
+  border: 1px solid rgba(0, 51, 102, .22);
+  border-radius: .55rem;
+  box-shadow: 0 8px 18px rgba(0, 34, 68, .06);
+  cursor: pointer;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.custom-select:hover {
+  border-color: rgba(212, 160, 23, .75);
+  box-shadow: 0 10px 22px rgba(0, 34, 68, .09);
+}
+
+.custom-select:focus {
+  border-color: var(--brand-gold);
+  box-shadow:
+    0 0 0 3px rgba(212, 160, 23, .22),
+    0 10px 22px rgba(0, 34, 68, .1);
+}
+
+.custom-select:invalid {
+  color: #6b7280;
+}
+
+.custom-select option {
+  color: #1f2937;
+  background: #fff;
+}
